@@ -174,7 +174,7 @@ button {
 .promo {
     box-shadow: 0 7px 12px rgba(158, 158, 163, 0.1);
     border-radius: 10px;
-    padding: 68px 70px;
+    padding: 48px 70px;
     margin-bottom: 56px;
 }
 
@@ -209,6 +209,10 @@ button {
     line-height: 28px;
     color: #302c34;
     max-width: 538px;
+}
+iframe {
+    height: 315px;
+    width: 60%;
 }
 
 .main {
@@ -840,4 +844,5 @@ button {
     .footer-link:not(:last-child) {
         margin-right: 0;
     }
+
 }

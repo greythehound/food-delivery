@@ -23,6 +23,7 @@ const modalBody = document.querySelector('.modal-body');
 const modalPrice = document.querySelector('.modal-pricetag');
 const clearCart = document.querySelector('.clear-cart');
 
+let user = 10;
 let loginValue = localStorage.getItem('foodDelivery');
 const cart = [];
 
