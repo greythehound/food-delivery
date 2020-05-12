@@ -213,6 +213,7 @@ button {
 iframe {
     height: 315px;
     width: 60%;
+    overflow: hidden;
 }
 
 .main {
