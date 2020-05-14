@@ -23,7 +23,7 @@ const modalBody = document.querySelector('.modal-body');
 const modalPrice = document.querySelector('.modal-pricetag');
 const clearCart = document.querySelector('.clear-cart');
 
-var user = '';
+var user = 'guest';
 let loginValue = localStorage.getItem('foodDelivery');
 const cart = [];
 
@@ -51,7 +51,7 @@ function authorized() {
   function logOut(){
     loginValue = null;
     localStorage.removeItem('foodDelivery');
-    user = loginValue;
+    user = 'guest';
     buttonAuth.style.display = '';
     username.style.display = '';
     buttonOut.style.display = '';
