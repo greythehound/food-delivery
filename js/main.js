@@ -117,13 +117,13 @@ function createCardRestaurant(restaurant) {
         <div class="card-text">
           <div class="card-heading">
             <h3 class="card-title">${name}</h3>
-            <span class="card-tag tag">${timeOfDelivery} мин</span>
+            <span class="card-tag tag">${timeOfDelivery} min</span>
           </div>
           <div class="card-info">
             <div class="rating">
               ${stars}
             </div>
-            <div class="price">От ${price} $</div>
+            <div class="price">from ${price} $</div>
             <div class="category">${kitchen}</div>
           </div>
         </div>
@@ -152,7 +152,7 @@ function createCardGood(goods) {
         </div>
         <div class="card-buttons">
           <button class="button button-primary button-add-cart" id="${id}">
-            <span class="button-card-text">В корзину</span>
+            <span class="button-card-text">Add to cart</span>
             <span class="button-cart-svg"></span>
           </button>
           <strong class="card-price card-price-bold">${price} $</strong>
