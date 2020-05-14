@@ -47,6 +47,7 @@ function toggleModalAuth() {
 function authorized() {
   console.log('Authorized');
   user = loginValue;
+
   function logOut(){
     loginValue = null;
     localStorage.removeItem('foodDelivery');
@@ -57,6 +58,7 @@ function authorized() {
     cartButton.style.display = '';
     buttonOut.removeEventListener('click', logOut);
     checkAuth();
+    location.reload();
   }
 
   username.textContent = loginValue;
@@ -83,6 +85,7 @@ function notAuthorized() {
       loginForm.removeEventListener('submit', login);
       loginForm.reset();
       checkAuth();
+      location.reload();
     } else {
       loginInput.classList.add('input-error');
     }
