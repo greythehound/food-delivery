@@ -22,7 +22,8 @@ const cardsMenu = document.querySelector('.cards-menu');
 const modalBody = document.querySelector('.modal-body');
 const modalPrice = document.querySelector('.modal-pricetag');
 const clearCart = document.querySelector('.clear-cart');
-
+var userId = 0;
+var tenantId = 1;
 var user = 'guest';
 let loginValue = localStorage.getItem('foodDelivery');
 const cart = [];
