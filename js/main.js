@@ -22,6 +22,7 @@ const cardsMenu = document.querySelector('.cards-menu');
 const modalBody = document.querySelector('.modal-body');
 const modalPrice = document.querySelector('.modal-pricetag');
 const clearCart = document.querySelector('.clear-cart');
+var id = 10;
 var userId = 0;
 var tenantId = 1;
 var user = 'guest';
