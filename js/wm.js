@@ -9,12 +9,17 @@ function getServer() {
     return serverDomains[serverConfig] || `cdn.walkme.com`;
 }
 
+function getEnv() {
+    let envConfig = localStorage.getItem('env');
+    return envConfig + "/" || "";
+}
+
 function buildSnippet(){
     let guid = localStorage.getItem('guid');
-    let env = localStorage.getItem('env');
+    let myEnv = getEnv();
     let myServer = getServer();
 
-    let snippet = `https://${myServer}/users/${guid}/${env}/walkme_${guid}_https.js`;
+    let snippet = `https://${myServer}/users/${guid}/${myEnv}walkme_${guid}_https.js`;
     localStorage.setItem('snippet', snippet);
 }
 
