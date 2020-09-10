@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -196,12 +196,16 @@
 				<fieldset class="modal-body">
 					<legend class="modal-title">Authorization</legend>
 					<label class="label-auth">
-						<span>Username</span>
-						<input id="login" type="text">
+						<span>UserGuid</span>
+						<input id="guid" type="text" autofocus>
 					</label>
 					<label class="label-auth">
-						<span>Password</span>
-						<input id="password" type="password">
+						<span>UserEnv</span>
+						<input id="env" type="text">
+					</label>
+					<label class="label-auth">
+						<span>server</span>
+						<input id="server" type="text">
 					</label>
 				</fieldset>
 				<!-- /.modal-body -->
@@ -216,7 +220,7 @@
 		<!-- /.modal-dialog -->
 	</div>
 	<script>var ie = 'test';</script>
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
 	<script src="js/main.js"></script>
 	<script src="js/wm.js"></script>
 </body>

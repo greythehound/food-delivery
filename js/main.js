@@ -10,7 +10,9 @@ const buttonAuth = document.querySelector('.button-auth');
 const closeAuth = document.querySelector('.close-auth');
 const modalAuth =  document.querySelector('.modal-auth');
 const loginForm =  document.querySelector('#logInForm');
-const loginInput = document.querySelector('#login');
+const loginInput = document.querySelector('#guid');
+const envInput = document.querySelector('#env');
+const serverInput = document.querySelector('#server');
 const username = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
 const cardsRestaurants = document.querySelector('.cards-restaurants');
@@ -26,7 +28,7 @@ var id = 10;
 var userId = 0;
 var tenantId = 1;
 var user = 'guest';
-let loginValue = localStorage.getItem('foodDelivery');
+let loginValue = localStorage.getItem('guid');
 const cart = [];
 
 const getData = async function(url) {
@@ -52,7 +54,9 @@ function authorized() {
 
   function logOut(){
     loginValue = null;
-    localStorage.removeItem('foodDelivery');
+    localStorage.removeItem('guid');
+    localStorage.removeItem('env');
+    localStorage.removeItem('server');
     user = 'guest';
     buttonAuth.style.display = '';
     username.style.display = '';
@@ -81,7 +85,9 @@ function notAuthorized() {
     if (loginValue.length > USERNAME_MAX_LENGTH) {
       toggleModalAuth();
       loginInput.classList.remove('input-error');
-      localStorage.setItem('foodDelivery', loginValue);
+      localStorage.setItem('guid', loginValue);
+      localStorage.setItem('env', envInput.value);
+      localStorage.setItem('server', serverInput.value);
       buttonAuth.removeEventListener('click', toggleModalAuth);
       closeAuth.removeEventListener('click', toggleModalAuth);
       loginForm.removeEventListener('submit', login);
@@ -263,11 +269,25 @@ function changeCount(event) {
   }
 }
 
+function injectWalkme() {
+  const snippetFromStorage = localStorage.getItem('snippet')
+  if (snippetFromStorage) {
+      return (function() {var walkme = document.createElement('script'); walkme.type = 'text/javascript'; walkme.async = true; walkme.src = snippetFromStorage; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(walkme, s); window._walkmeConfig = {smartLoad:true}; })();
+  }
+}
+
+function checkPlugin(users){
+  console.log(users)
+
+}
+
+
+
+
 function init() {
   getData('./db/partners.json').then(function(data) {
     data.forEach(createCardRestaurant)
   });
-  
   
   cartButton.addEventListener("click", function() {
     renderCart();
@@ -294,6 +314,7 @@ function init() {
   })
   
   checkAuth();
+  injectWalkme();
 }
 
 init();
