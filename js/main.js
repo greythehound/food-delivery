@@ -57,6 +57,7 @@ function authorized() {
     localStorage.removeItem('guid');
     localStorage.removeItem('env');
     localStorage.removeItem('server');
+    localStorage.removeItem('snippet');
     user = 'guest';
     buttonAuth.style.display = '';
     username.style.display = '';
