@@ -1,0 +1,44 @@
+[
+    {
+      "2833": {
+        "userId": 2833,
+        "environments": {
+          "0": {
+            "wm-plugin-sf-lightning-init-user-context": "0.1.2",
+            "wm-plugin-salesforce-lightning-find-element": "2.1.11",
+            "wm-plugin-lightning-spa": "1.0.1",
+            "wm-plugin-native-functions-restorer": "0.2.3",
+            "wm-plugin-sf-vars": "1.0.24",
+            "wm-plugin-widget-drag-and-drop": "1.8.1"
+          },
+          "1": {
+            "wm-plugin-sf-lightning-init-user-context": "0.1.2",
+            "wm-plugin-salesforce-lightning-find-element": "2.1.11",
+            "wm-plugin-lightning-spa": "1.0.1",
+            "wm-plugin-native-functions-restorer": "0.2.3",
+            "wm-plugin-sf-vars": "1.0.24",
+            "wm-plugin-widget-drag-and-drop": "1.8.1"
+          },
+          "3": {
+            "wm-plugin-sf-lightning-init-user-context": "0.1.2",
+            "wm-plugin-salesforce-lightning-find-element": "2.1.11",
+            "wm-plugin-lightning-spa": "1.0.1",
+            "wm-plugin-native-functions-restorer": "0.2.3",
+            "wm-plugin-sf-vars": "1.0.24",
+            "wm-plugin-widget-drag-and-drop": "1.8.1"
+          },
+          "32": {
+            "wm-plugin-sf-lightning-init-user-context": "0.1.2",
+            "wm-plugin-salesforce-lightning-find-element": "2.1.11",
+            "wm-plugin-lightning-spa": "1.0.1",
+            "wm-plugin-native-functions-restorer": "0.2.3",
+            "wm-plugin-sf-vars": "1.0.24",
+            "wm-plugin-widget-drag-and-drop": "1.8.1"
+          },
+          "2880": {}
+        },
+        "email": "dan_lightning_ar9n@walkme.com",
+        "type": null
+      }
+    }
+  ]
