@@ -9,15 +9,12 @@
         <script type="text/javascript" src="cookiesStorageManager.js"></script>
         <script type="text/javascript" src="targil.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-        
         <style>
-
             body {
                 font-family: 'open sans',Arial, Helvetica, sans-serif;
                 background-color: #f8f8f8;
                 margin: 0;
             }
-
             h1 {
                 height: 127px;
                 line-height: 127px;
@@ -28,41 +25,65 @@
                 text-align: center;
                 margin-bottom: 30px;
             }
-
             h3 {
                 margin-bottom: 5px;
             }
-
             img {
                 position: absolute;
             }
-
             a {
                 color:#1b84cd;
                 text-decoration: none;
             }
-
             section {
                 padding:25px;
             }
-
             ul.background {
                 list-style: none;
             }
-
             ul {
                 list-style-type: square;
             }
-
+            /* List */
+            ul {
+              counter-reset: index;  
+              padding: 0;
+            }
+            /* List element */
+            li {
+              counter-increment: index; 
+              display: flex;
+              align-items: center;
+              padding: 12px 0;
+              box-sizing: border-box;
+            }
+            /* Element counter */
+            li::before {
+              content: counters(index, ".");
+              font-size: 1.5rem;
+              text-align: center;
+              font-weight: bold;
+              min-width: 50px;
+              padding-right: 12px;
+              font-variant-numeric: tabular-nums;
+              align-self: flex-start;
+              background-image: linear-gradient(to bottom, aqua, navy);
+              background-attachment: fixed;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            /* Element separation */
+            li + li {
+              border-top: 1px solid rgba(150,150,150,0.2);
+            }
             .bywalkme {
-                background: url(resources/bywalkme-right.png) top right no-repeat;
+                background: url(img/wm/bywalkme-right.png) top right no-repeat;
                 width: 144px;
                 height: 133px;
                 position: absolute;
                 right: 0;
                 top: 0;          
             }
-            
             input[type=button] {
                 background-color: #1b84cd;
                 color:#fff;
@@ -75,89 +96,73 @@
                 outline: 0;
                 cursor: pointer;
             }
-
             input[type=button]:hover {
                 background-color: #0b6caf;
             }
-
             input[type=button]:active {
                 background-color: #0f5280;
             }
-
             .txtStatus {
                 width: 800px;
                 height: 200px;
                 display: block;
             }
-
             .output-section {
                 padding-bottom: 20px;
                 margin-bottom: 10px;
                 border-bottom: 1px solid #2f3d43;
             }
-
             .background-title {
                 margin-top: 0;
             }
-
             .output-area {
                 display: inline-block;
                 margin: 10px 0;
                 padding:10px 0;
             }
-
             .output-area p {
                 margin: 3px;
             }
-
             .params-table {
                 border: solid black 1px;
                 border-collapse: collapse;
             }
-
             .part-title {
                 color:#000;
                 margin-top: 30px;
                 text-decoration: underline;
             }
-
             .params-table td {
                 padding:5px;
                 vertical-align: bottom;
                 border-bottom: 1px solid #000;
                 border-right: 1px solid #000;
             }
-
             .params-table thead td {
                 color:#fff;
                 background-color: #2f3d43;
             }
-
         </style>
-
     </head>
 	<body>
         <div class="bywalkme"></div> 
-        <h1>Welcome to WalkMe</h1>
+        <h1>Welcome to WalkMe!</h1>
         <section>
-
                 <div class="output-area">
                     <p>This is the first part of an interview process used to determine if you are the person we want to add to our amazing team.</p>
-                    <p>In this part we will test your QA engineering skills.</p>
-                    <p>The task is a Website in HTML/CSS/JavaScript, so if you are unfamiliar with it please take the time to study a little prior to starting the task.</p>
+                    <br>
+                    <p>In this part we will test your QA engineering skills. The task involves a simple website in HTML/CSS/JavaScript, so if you are unfamiliar with these, please take the time to study a little prior to starting the task.</p>
                 </div>
-
-
                 <h3 class="background-title">Steps</h3>
                 <ul class="background">
-                    <li>1. <a href='http://127.0.0.1:5500/index.html' target="_black;">This page is what you will be focused on during this exercise</a></li>
-                    <li>2. Please use the website as a user and document all bugs in the spreadsheet</li>
-                    <li>3. Feel free to design the spreadsheet as you wish</li>
-                    <li>4. Take into account that developer will use your spreadsheet to fix all the problems on the site</li>
-                    <li>5. Be detailed for a few bugs, and feel free to write only Summary for the rest.</li>
-
+                    <li>You will be focused on &nbsp;<a href='http://127.0.0.1:5500/index.html' target="_black;"> this page </a>&nbsp; for this exercise.</li>
+                    <li>Please use the website as a user and document all bugs in the spreadsheet.</li>
+                    <li>Feel free to design the spreadsheet as you wish.</li>
+                    <li>Take into account that a developer will use your spreadsheet (and only your spreadsheet) as a guide to fix all of the problems on the site.</li>
+                    <li>Quality over quantity! We're excited to see all the bugs you can find, but we are more intersted to see how you think, and how you design and organize issues.</li>
+                    <li>Most importantly... HAVE FUN! :)</li>
                 </ul>
-            
+            <br>
             <p><b>Good Luck!</b></p>
         </section>
     </body>
