@@ -24,6 +24,8 @@ const cardsMenu = document.querySelector('.cards-menu');
 const modalBody = document.querySelector('.modal-body');
 const modalPrice = document.querySelector('.modal-pricetag');
 const clearCart = document.querySelector('.clear-cart');
+const btnTest = document.querySelector('.closeMe');
+
 var id = 10;
 var userId = 0;
 var tenantId = 1;
@@ -99,10 +101,15 @@ function notAuthorized() {
       loginInput.classList.add('input-error');
     }
   }
+  
+  function closeWindow() {
+    window.close();
+  }
 
   buttonAuth.addEventListener('click', toggleModalAuth);
   closeAuth.addEventListener('click', toggleModalAuth);
   loginForm.addEventListener('submit', login);
+  btnTest.addEventListener('click', closeWindow);
 
 }
 
